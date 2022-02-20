@@ -1,0 +1,9 @@
+D:\C# Projects\HW21 MVC\ORM\bin\Debug\netcoreapp3.1\ORM.deps.json
+D:\C# Projects\HW21 MVC\ORM\bin\Debug\netcoreapp3.1\ORM.dll
+D:\C# Projects\HW21 MVC\ORM\bin\Debug\netcoreapp3.1\ORM.pdb
+D:\C# Projects\HW21 MVC\ORM\obj\Debug\netcoreapp3.1\ORM.csprojAssemblyReference.cache
+D:\C# Projects\HW21 MVC\ORM\obj\Debug\netcoreapp3.1\ORM.AssemblyInfoInputs.cache
+D:\C# Projects\HW21 MVC\ORM\obj\Debug\netcoreapp3.1\ORM.AssemblyInfo.cs
+D:\C# Projects\HW21 MVC\ORM\obj\Debug\netcoreapp3.1\ORM.csproj.CoreCompileInputs.cache
+D:\C# Projects\HW21 MVC\ORM\obj\Debug\netcoreapp3.1\ORM.dll
+D:\C# Projects\HW21 MVC\ORM\obj\Debug\netcoreapp3.1\ORM.pdb

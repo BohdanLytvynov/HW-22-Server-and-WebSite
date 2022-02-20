@@ -1,0 +1,212 @@
+﻿.header {
+    border: 3px solid white;
+    background-image: linear-gradient(to bottom, #0094ff, #0026ff);
+    margin: 5px;
+    height: 8vh;
+    text-align: center;
+    padding: 7px;
+    color: white;
+    font-size: 30px;
+    font-weight: 100;
+    font-family: 'Times New Roman';
+}
+
+.h1 {
+    color: white;
+    font-size:14px;
+    margin-left:20px;
+    font-family:'Times New Roman';
+    padding:10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.button {
+    width: 200px;
+    height: 50px;
+    background-image: linear-gradient(to bottom, #0094ff, #0026ff);
+    transition: 0.5s;
+    border-color: grey;
+    border-width: 6px;
+}
+
+button:hover {
+    background-image: linear-gradient(to bottom, #d3e62a, #faaf14);
+    border-width: 2px;
+    color: white;
+}
+
+.back {
+    background-image: url(../images/FractalsBackground2048.png);
+    height: 100%;
+    background-size: cover;
+}
+
+td {
+    color: white;
+    font-size: 20px;
+    border-width: 3px;
+}
+
+
+.table {
+    margin-left: 20px;
+    margin-top: 40px;
+    margin-right:0px;
+    margin-bottom:20px;
+    border: 3px double #0026ff;
+}
+
+.infoback {
+    background-image: url("../images/Network 1500-1000.jpg");
+}
+
+.footer {
+    border: 2px solid white;
+    margin-top:40px;
+    margin-left:20px;
+    margin-bottom:200px;
+    width:230px;
+    height:60px;
+}
+
+.foottext {
+
+}
+
+.footbutton{
+    border:2px solid white;
+    background-image:linear-gradient(to bottom, #0094ff, #0026ff);
+    margin-left:5px;
+    margin-right:5px;
+    text-align:center;
+    padding-top:10px;          
+    width:100px;
+    height:40px;
+    transition: 0.3s;
+}
+
+.butrow {
+    height:47px;
+}
+
+.footbutton:hover {
+    border:3px double #a99600;
+    width:105px;
+    height:45px;
+    background-image:linear-gradient(to bottom, #d3e62a, #faaf14);
+    color:black;
+}
+
+.ftbtnspan {
+    color: white;
+    font-family: 'Times New Roman';
+    transition: 0.3s;
+    font-style: normal;
+    font-size: 18px;    
+}
+
+    .ftbtnspan:hover {
+        color:black;
+    }
+
+    label {
+        color: white;
+        font-size: 20px;
+    }
+
+.h1 {
+    color:white;
+    font-size:18px;
+    margin-left:20px;
+}
+
+.form {
+    margin-left:20px;
+}
+
+.formitem {
+    margin-top:5px;
+    margin-bottom:5px;
+}
+
+.succes {
+    font-size:20px;
+    color:#1e8116;
+}
+
+.error {
+    font-size:20px;
+    color:#ad1717;
+}
+
+.hadres {
+    margin-left:40px;
+    margin-top:30px;
+}
+
+.erlist {
+    color:#fa3f3f;
+    font-size:14px;
+    margin-left:20px;
+    margin-top:20px;
+}
+
+.submit {
+    width: 120px;
+    height: 50px;
+    border: 2px solid white;
+    background-image: linear-gradient(to bottom, #0094ff, #0026ff);
+    color: white;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.submit:hover {
+    width: 125px;
+    height: 55px;
+    border: 1px double #cb6725;
+    background-image: linear-gradient(to bottom, #d3e62a, #faaf14);
+    color: black;
+}
+
+.errorinp {
+    background-color:rgba(226, 54, 54, 0.43);
+    border: 3px double #e91919;
+    color:white;
+}
+
+.correctinp {
+    background-color:rgba(57, 212, 33, 0.34);
+    border: 3px double #489732;
+    color:white;
+
+}
+
+.textinp {}
+
+.numbinp{}
+
+.numbtxt {}
+
+.formEdit {
+}
+
+.divborder {
+    border: 2px dotted #0026ff;
+}
+
+.subdisabled {
+    background-image: linear-gradient(to bottom, #c8c8c8, #5e5e5e);
+    width: 120px;
+    height: 50px;
+    border: 2px solid black;
+    color: black;
+    font-size: 15px;
+}
+
+
+
+

@@ -1,0 +1,60 @@
+﻿@using HW21_MVC.ViewModel 
+@model UserRegistrationVM 
+
+    <div>
+        <form class="form" action="~/Account/RegisterUser" method="post">
+            <div class="formitem">
+                <label>
+                    Enter Login:
+                </label>
+                <br />
+                <input type="text" name="Username" id="Username"/>
+                <br />
+            </div>
+            <div class="formitem">
+                <label>Enter Email:</label><br />
+                <input type="text" name="Email" id="Email" />
+                <br />
+            </div>
+            <div class="formitem">
+                <label>
+                    Enter Password:
+                </label>
+                <br />
+                <input type="text" name="Password" id="Password" />
+                <br />
+            </div>
+            <div class="formitem">
+                <label>
+                    Confirm Password:
+                </label>
+                <br />
+                <input type="text" name="ConfirmPassword" 
+                       id="ConfirmPassword" />
+                <br />
+            </div>
+
+            <p>
+                <input type="submit"                      
+                       value="Register"
+                       name="Register"
+                       class="submit" />
+            </p>
+        </form>
+    </div>
+
+    <div>
+        @{
+            List<string> errors = (List<string>)ViewData["Elist"];
+
+            if (errors != null && errors.Count != 0)
+            {
+                foreach (var e in errors)
+                {
+                    <ul style="color:red; font-size:20px; padding:5px; margin:20px;">
+                        @e
+                    </ul>
+                }
+            }
+        }
+    </div>

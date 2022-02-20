@@ -1,0 +1,81 @@
+﻿@using ORM;
+@{    
+    Layout = "_Layout";    
+}
+
+@functions{ public Notes SelectedNote{ get; set; } }
+
+
+<table class="table" id="parstable" border="1">
+    <tr>
+        <td>
+            Id
+        </td>
+
+        <td>
+            Surename
+        </td>
+
+        <td>
+            Name
+        </td>
+
+        <td>
+            Lastname
+        </td>
+
+        <td>
+            Phone
+        </td>
+
+        <td>
+            Adress
+        </td>
+
+        <td>
+            Description
+        </td>
+    </tr>
+
+    @{
+        Notes item = (Notes)ViewData["sNote"];
+        SelectedNote = item;
+<tr>
+    <td>
+        @item.Id
+    </td>
+    <td>
+        @item.Surename
+    </td>
+    <td>
+        @item.Name
+    </td>
+    <td>
+        @item.Lastname
+    </td>
+    <td>
+        @item.Phone
+    </td>
+    <td>
+        @item.Adress
+    </td>
+    <td>
+        @item.Description
+    </td>
+</tr>
+
+    }
+</table>
+        
+<div class="formEdit"></div>  
+    <div style="margin-left:20px; margin-top:20px;">   
+        <a href="~/Admin/Admin/Index" class="footbutton"><span class="ftbtnspan">Back to Viewer</span></a>
+        <a class="footbutton" style="cursor:pointer" id="addform"><span id ="addformspan" class="ftbtnspan">Edit_Note</span></a>
+        <a class="footbutton" href="~/Admin/Admin/RemoveNote/id=@SelectedNote.Id">
+        <span class="ftbtnspan">Remove_Note</span></a>               
+    </div>
+ <script src="~/js/EditNoteScript.js" asp-append-version="true"></script>
+    
+
+
+

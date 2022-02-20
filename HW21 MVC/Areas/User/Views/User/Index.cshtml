@@ -1,0 +1,86 @@
+﻿@{
+    Layout = "_Layout";
+}
+@using ORM
+
+@{        
+    <h1 class="h1">You are signed in as 
+    <span style="color:green; font-size:20px; font-weight:300">
+        @ViewData["User"]</span></h1>
+}
+
+<div style="padding:20px; margin-left:10px">
+    <a class="footbutton" href="~/Account/Logout">
+        <span class="ftbtnspan">Log out</span>
+    </a>
+</div>
+
+<div>
+    <table border="1" class="table">
+        <tr>
+            <td>
+                Id
+            </td>
+            <td>
+                Surename
+            </td>
+            <td>
+                Name
+            </td>
+            <td>
+                Lastname
+            </td>
+            <td>
+                Phone
+            </td>
+            <td>
+                Adress
+            </td>
+            <td>
+                Description
+            </td>
+        </tr>
+
+        @{
+
+            var res = (IQueryable<Notes>)ViewData["NotesCol"];
+
+            int id = 1;
+
+            foreach (var item in res)
+            {
+                <tr>
+                    <td>
+                        @id
+                    </td>
+                    <td>
+                        @item.Surename
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Lastname
+                    </td>
+                    <td>
+                        @item.Phone
+                    </td>
+                    <td>
+                        @item.Adress
+                    </td>
+                    <td>
+                        @item.Description
+                    </td>                    
+                </tr>
+
+                id++;
+            }
+        }
+
+    </table>
+</div>
+
+<div style="margin-left:20px; padding:20px">
+    <a class="footbutton" href="~/User/User/AddUserForm"><span class="ftbtnspan">
+        Add Note</span></a>
+</div>

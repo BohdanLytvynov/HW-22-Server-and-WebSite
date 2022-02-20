@@ -1,0 +1,91 @@
+﻿@{
+    Layout = "_Layout";
+}
+@using ORM
+                               
+        <h1 class="h1">
+            You are not signed in.
+            To have an opportunity to add note sign in as user.
+            If you are an admin, sign in as admin.
+            If you don't have account, you can register.
+        </h1>
+        
+    <div style="padding:20px; margin-left:10px">
+        <a class="footbutton"
+           href="~/Account/Login"><span class="ftbtnspan">Login</span></a>
+
+        <a class="footbutton"
+           href="~/Account/Register"><span class="ftbtnspan">Register</span></a>
+    </div>
+
+
+
+<div>
+    <table border="1" class="table">
+        <tr>
+            <td>
+                Id
+            </td>
+            <td>
+                Surename
+            </td>
+            <td>
+                Name
+            </td>
+            <td>
+                Lastname
+            </td>
+            <td>
+                Phone
+            </td>
+            <td>
+                Adress
+            </td>
+            <td>
+                Description
+            </td>
+        </tr>
+
+        @{
+
+            var res = (IQueryable<Notes>)ViewData["NotesCol"];
+
+            int id = 1;
+
+            foreach (var item in res)
+            {
+                <tr>
+                    <td>
+                        @id
+                    </td>
+                    <td>
+                        @item.Surename
+                    </td>
+                    <td>
+                        @item.Name
+                    </td>
+                    <td>
+                        @item.Lastname
+                    </td>
+                    <td>
+                        @item.Phone
+                    </td>
+                    <td>
+                        @item.Adress
+                    </td>
+                    <td>
+                        @item.Description
+                    </td>                    
+                </tr>
+
+                id++;
+            }
+        }
+
+    </table>
+</div>
+
+<div>
+
+</div>
+

@@ -1,0 +1,20 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>@ViewData["Model"]</title>
+    @await Html.PartialAsync("PartialCSS")
+    
+</head>
+<body class="infoback">
+    <header>
+        <div class="header">
+            @ViewData["ActionType"]
+        </div>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>       
+    </footer>
+    </body>
+</html>

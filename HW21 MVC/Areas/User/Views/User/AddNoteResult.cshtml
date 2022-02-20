@@ -1,0 +1,64 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@functions
+{
+    private void ShowAddResult()
+    {
+        if ((bool)ViewData["OperRes"])
+        {
+            <span class="succes">Operation Result Success.</span>
+        }
+        else
+        {
+            <span class="error">
+                Operation Result Failure! Incorrect input! Check Fields!
+                Here is error info list:
+            </span>
+
+            <div>
+                @{
+                    var errors = (List<string>)ViewData["Errors"];
+                    for (int i = 0; i < errors.Count; i++)
+                    {
+                        <ul class="erlist">@errors[i]</ul>
+                    }
+                }
+            </div>
+        }
+    }
+
+    private void ShowRemoveresult()
+    {
+        if ((bool)ViewData["OperRes"])
+        {
+            <span class="succes">Operation Result Success.</span>
+        }
+        else
+        {
+            <span class="error">Operation Result Failure.</span>
+        }
+    }   
+}
+
+<h1 class="hadres">
+
+    @switch (ViewData["operType"])
+    {
+        case 1: //Add
+            ShowAddResult();
+            break;
+        default:
+            ShowRemoveresult();
+            break;
+    }
+
+
+</h1>
+
+<div style="padding:20px; margin-left:20px">
+    <a class="footbutton" 
+       href="~/User/User/Index">
+    <span class="ftbtnspan">Back to Viewer</span></a>
+</div>

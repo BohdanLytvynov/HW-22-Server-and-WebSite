@@ -1,0 +1,55 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@await Html.PartialAsync("PartialJs");
+
+<h1 class="h1">To create a new note please fill the form bellow:</h1>
+<div class="form">
+    <form action="~/User/User/AddNote" method="post">
+        <div class="formitem">
+            <label>Enter Surename:</label><br />
+            <input class="textinp" type="text" name="Surename" id="Surename" />
+            <br />
+        </div>
+        <div class="formitem">
+            <label>Enter Name:</label><br />
+            <input class="textinp" type="text" name="Name" id="Name" />
+            <br />
+        </div>
+        <div class="formitem">
+            <label>Enter Lastname:</label><br />
+            <input class="textinp" type="text" name="Lastname" id="Lastname" />
+            <br />
+        </div>
+        <div class="formitem">
+            <label>Enter Phone:</label><br />
+            <input class="numbinp" type="text" name="Phone" id="Phone" />
+            <br />
+        </div>
+        <div class="formitem">
+            <label>Enter Adress:</label><br />
+            <textarea class="numbtxt" name="Adress" id="Adress" rows="3" cols="70" wrap="soft">
+            </textarea>
+            <br />
+        </div>
+        <div class="formitem">
+            <label>Enter Description:</label><br />
+            <textarea class="numbtxt" name="Description" id="Description" rows="3" cols="70" wrap="soft">
+            </textarea>
+            <br />
+            <p>
+                <input type="submit"
+                       name="AddNote"
+                       value="Add Note To DB"
+                       class="submit"
+                       />
+            </p>
+        </div>
+    </form>
+
+</div>
+
+<div style="margin-left:20px; padding:20px">
+    <a href="~/User/User/Index" class="footbutton"><span class="ftbtnspan">Back To View</span></a>
+</div>

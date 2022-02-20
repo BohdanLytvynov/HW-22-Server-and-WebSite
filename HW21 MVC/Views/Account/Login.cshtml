@@ -1,0 +1,43 @@
+﻿
+@model HW21_MVC.ViewModel.LoginVM
+    <div class="form">
+        <form action="~/Account/Login" method="post">
+            <div class="formitem">
+                <label>Enter Login:</label><br />
+                <input class="textinp" type="text" name="Username" id="Username" />
+                <br />
+            </div>
+            <div class="formitem">
+                <label>Enter Password:</label><br />
+                <input class="textinp" type="text" name="Password" id="Password" />
+                <br />
+            </div>
+            <div class="formitem">
+                <label>Remember me:</label><br />
+                <input class="textinp" type="checkbox" name="RememberMe" id="RememberMe" />
+                <br />
+            </div>
+            <p>
+                <input type="submit" 
+                       name="Login"
+                       value="Login"
+                       class="submit" />
+            </p>
+        </form>
+    </div>
+
+    <div>
+        @{
+            List<string> errors = (List<string>)ViewData["Elist"];
+
+            if (errors!= null && errors.Count != 0)
+            {
+                foreach (var e in errors)
+                {
+                    <ul style="color:red; font-size:20px; padding:5px; margin:20px;">
+                        @e
+                    </ul>
+                }
+            }
+        }
+    </div>
