@@ -24,11 +24,8 @@ namespace HW21_MVC.Controllers
         private List<string> m_error_List;
 
         public AccountController(UserManager<IdentityUser>
-            userManager, SignInManager<IdentityUser> signIn,
-            RoleManager<IdentityRole> idRoleManager)
-        {
-            //m_identityRoleManager = idRoleManager;
-
+            userManager, SignInManager<IdentityUser> signIn)            
+        {            
             m_usermanager = userManager;
 
             m_signIn = signIn;
