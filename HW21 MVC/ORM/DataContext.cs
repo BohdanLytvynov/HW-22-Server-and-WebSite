@@ -20,7 +20,7 @@ namespace ORM
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(builder);
+            
             //Create admin for site
             //1) Create user role admin
             builder.Entity<IdentityRole>().HasData(
@@ -62,6 +62,8 @@ namespace ORM
                     RoleId= "7a982c4d-b6d9-4fd6-9937-f67761feffe7"
                 }
                 );
+
+            base.OnModelCreating(builder);
         }
 
 
