@@ -64,10 +64,10 @@ namespace HW21_MVC
             services.AddAuthorization(
                 o=>
                 {
-                    o.AddPolicy("AdminArea", policy=>
+                    o.AddPolicy("AdminPolicy", policy=>
                     { policy.RequireRole("admin"); });
 
-                    o.AddPolicy("UserArea", policy =>
+                    o.AddPolicy("UserPolicy", policy =>
                     { policy.RequireRole("user"); });
                 }
                 );
@@ -76,11 +76,11 @@ namespace HW21_MVC
             services.AddControllersWithViews(
                 s=>                                   
                 {
-                    s.Conventions.Add(new UserAreaAuthorization("Admin", 
-                        "AdminArea"));
+                    s.Conventions.Add(new UserAreaAuthorization("Admin",
+                        "AdminPolicy"));
 
                     s.Conventions.Add(new UserAreaAuthorization("User",
-                        "UserArea"));
+                        "UserPolicy"));
                     //Admin - area where admincontroller is stored
                 }
                 );
