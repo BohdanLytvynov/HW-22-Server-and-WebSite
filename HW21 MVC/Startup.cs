@@ -72,7 +72,7 @@ namespace HW21_MVC
                 }
                 );
 
-            //Add MVC functions
+            //Add MVC functions            
             services.AddControllersWithViews(
                 s=>                                   
                 {
